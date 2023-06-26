@@ -1,30 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * puts_half - a function that prints half of a string
+ * if odd len, n = (length_of_the_string - 1) / 2
+ * @str: input
+ * Return: half of input
  */
-int main(void)
+void puts_half(char *str)
 {
-    int nb;
+	int a, n, longi;
 
-    nb = _atoi("98");
-    printf("%d\n", nb);
-    nb = _atoi("-402");
-    printf("%d\n", nb);
-    nb = _atoi("          ------++++++-----+++++--98");
-    printf("%d\n", nb);
-    nb = _atoi("214748364");
-    printf("%d\n", nb);
-    nb = _atoi("0");
-    printf("%d\n", nb);
-    nb = _atoi("Suite 402");
-    printf("%d\n", nb);
-    nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-    printf("%d\n", nb);
-    nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-    printf("%d\n", nb);
-    return (0);
+	longi = 0;
+
+	for (a = 0; str[a] != '\0'; a++)
+		longi++;
+
+	n = (longi / 2);
+
+	if ((longi % 2) == 1)
+		n = ((longi + 1) / 2);
+
+	for (a = n; str[a] != '\0'; a++)
+		_putchar(str[a]);
+	_putchar('\n');
 }
