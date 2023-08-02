@@ -4,9 +4,9 @@
 
 /**
  * _ra - reallocates memory for an array of pointers
+ *
  * to the nodes in a linked list
  * @list:old list to append
- *
  *
  * @size: size of the new list (always one more than the old list)
  * @new: new node to add to the list
@@ -33,8 +33,9 @@ listint_t **_ra(listint_t **list, size_t size, listint_t *new)
 
 /**
  * free_listint_safe - frees a listint_t linked list.
- * @head: THE 
- * double pointer to the start of the list
+ *
+ * @head: double pointer to the start of the list
+ *
  *
  * Return: the number of nodes in the list
  */
